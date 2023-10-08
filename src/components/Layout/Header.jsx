@@ -19,6 +19,7 @@ import { RxCross1 } from "react-icons/rx";
 const heart = require("./images/heart.png");
 const shoppingCart = require("./images/shopping-cart.png");
 const pfp = require("./images/user.png");
+const logo = require("../../logo.png");
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -71,7 +72,7 @@ const Header = ({ activeHeading }) => {
         <div className="hidden 800px:h-[50px] 800px:my-[20px] 800px:flex items-center justify-between">
           <div>
             <Link to="/">
-              <p className="text-3xl font-semibold"> MWZ3</p>
+              <img className="w-[150px]" src={logo} alt="" />{" "}
             </Link>
           </div>
           {/* search box */}
@@ -110,7 +111,7 @@ const Header = ({ activeHeading }) => {
             ) : (
               <Link to="/login">
                 <div className="flex items-center hover:shadow">
-                  <p className="p-3 text-gray-500 hover:text-red-600 duration-300">
+                  <p className="p-3 text-gray-500 hover:text-orange-600 duration-300">
                     تسجيل الدخول
                   </p>
                   <div>
@@ -120,7 +121,7 @@ const Header = ({ activeHeading }) => {
               </Link>
             )}
             <div
-              className={` bg-white border-b border-gray-400 p-3 text-gray-500 hover:border-red-600 hover:text-red-600 duration-300 cursor-pointer`}
+              className={` bg-white border-b border-gray-400 p-3 text-gray-500 hover:border-orange-600 hover:text-red-600 duration-300 cursor-pointer`}
             >
               <Link to={`${isSeller ? "/dashboard" : "/shop-create"}`}>
                 <h1 className=" flex items-center">
@@ -135,19 +136,19 @@ const Header = ({ activeHeading }) => {
         dir="rtl"
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-        } transition hidden 800px:flex items-center justify-between w-full bg-red-600 `}
+        } transition hidden 800px:flex items-center justify-between w-full bg-white z-30`}
       >
         <div
           className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
         >
           {/* categories */}
           <div className="h-full flex" onClick={() => setDropDown(!dropDown)}>
-            <div className="flex relative   w-[270px] hidden 1000px:block">
+            <div className="flex relative w-[270px] hidden 1000px:block">
               {
                 // <BiMenuAltLeft size={30} className="absolute top-4 left-2 text-white" />
               }{" "}
               <button
-                className={`h-full w-full flex justify-between items-center p-3 pr-3 font-sans text-lg font-[500] select-none bg-red-800 text-white`}
+                className={`h-full w-full flex justify-between items-center p-3 pr-3 font-sans text-lg font-[500] select-none bg-gray-200`}
               >
                 قوائم المنتجات
               </button>
@@ -247,8 +248,7 @@ const Header = ({ activeHeading }) => {
             <Link to="/">
               <p className="text-3xl font-semibold">
                 {" "}
-                <span className="text-5xl font-semibold text-red-600">E</span>gy
-                <span className="text-5xl text-red-600 font-semibold">M</span>ol
+                <img className="w-[200px]" src={logo} alt=""/>
               </p>
             </Link>
           </div>

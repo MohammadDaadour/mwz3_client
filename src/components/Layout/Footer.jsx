@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../logo.png";
 import {
   AiFillFacebook,
   AiFillInstagram,
@@ -14,17 +15,13 @@ import {
 
 const Footer = () => {
   return (
-    <div dir="rtl" className="bg-[#000] text-white">
+    <div dir="rtl" className="bg-gray-400 text-white flex">
       <hr className="border-t-gray-600" />
-      <div className="flex md:justify-between justify-center flex-wrap-reverse  md:flex-nowrap sm:px-8 px-3 py-16 sm:text-center ">
-        <ul className="px-5 text-center text-start flex sm:block flex-col items-center md:mt-0 mt-20">
-          <p className="text-3xl font-semibold">
+      <div className="flex md:justify-between justify-center flex-wrap-reverse  md:flex-nowrap sm:px-8 px-3 sm:text-center ">
+        <ul className="flex px-5 text-center text-start flex sm:block flex-col items-center md:mt-0 mt-20">
             {" "}
-            <span className="text-5xl font-semibold text-red-600">E</span>gy
-            <span className="text-5xl text-red-600 font-semibold">M</span>ol
-          </p>{" "}
+            <img src={logo} alt="" className="w-[200px]" />{" "}
           <br />
-          <p></p>
           <div className="flex items-center mt-[15px]">
             <AiFillFacebook size={25} className="cursor-pointer" />
             <AiOutlineTwitter
@@ -42,7 +39,7 @@ const Footer = () => {
           </div>
         </ul>
 
-        <div className="flex  flex-col items-center sm:px-12 sm:px-4 ">
+        {/* <div className="flex  flex-col items-center sm:px-12 sm:px-4 ">
           <h1 className="lg:text-4xl text-3xl mb-5 lg:leading-normal font-semibold whitespace-nowrap text-center md:text-start">
             <span className="text-red-600">اشترك معنا</span> ليصلك
             <br />
@@ -59,8 +56,8 @@ const Footer = () => {
             <button className="bg-red-600 hover:bg-red-800 duration-300 px-5 py-2.5 text-whie md:w-auto w-full">
               اشتراك
             </button>
-          </div>
-        </div>
+          </div> 
+        </div>*/}
 
         {/*
         <ul className="text-center sm:text-start">
@@ -114,7 +111,7 @@ const Footer = () => {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
          text-center pt-2 text-gray-400 text-sm pb-8"
       >
-        <span>.© 2023 Mohammad Daadour. all rights reserved</span>
+        <span className="text-black">.© 2023 MWZ3. all rights reserved</span>
         <span>Terms · Privacy Policy</span>
         <div className="sm:block flex items-center justify-center w-full"></div>
       </div>
