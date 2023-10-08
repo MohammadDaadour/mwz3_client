@@ -234,7 +234,7 @@ const Header = ({ activeHeading }) => {
         className={`${
           active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
         }
-      w-full px-5 py-2 bg-[#fff] z-50 top-0 left-0 shadow-sm 800px:hidden`}
+    z-50  w-full px-5 py-2 bg-[#fff] z-50 top-0 left-0 shadow-sm 800px:hidden`}
       >
         <div className="w-full flex items-center justify-between">
           <div>
@@ -248,7 +248,7 @@ const Header = ({ activeHeading }) => {
             <Link to="/">
               <p className="text-3xl font-semibold">
                 {" "}
-                <img className="w-[200px]" src={logo} alt=""/>
+                <img className="w-[200px]" src={logo} alt="" />
               </p>
             </Link>
           </div>
@@ -277,7 +277,7 @@ const Header = ({ activeHeading }) => {
         {/* header sidebar */}
         {open && (
           <div
-            className={`fixed w-full bg-[#0000005f] z-20 h-full top-0 right-0 `}
+            className={`fixed w-full bg-[#0000005f] z-50 h-full top-0 right-0 `}
           >
             <div className="fixed w-[70%] bg-[#fff] h-screen top-0 right-0 z-10 left-cart-anim">
               <div className="w-full justify-between flex pr-3">

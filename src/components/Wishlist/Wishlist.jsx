@@ -22,8 +22,8 @@ const Wishlist = ({ setOpenWishlist }) => {
   }
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10">
-      <div className="fixed top-0 left-0 h-full w-[80%] overflow-y-scroll 800px:w-[25%] bg-white flex flex-col justify-between shadow-sm z-3 cart-anim">
+    <div className="z-30 fixed top-0 left-0 w-full bg-[#0000004b] h-screen">
+      <div className="z-30 fixed top-0 left-0 h-full w-[80%] overflow-y-scroll 800px:w-[25%] bg-white flex flex-col justify-between shadow-sm z-3 cart-anim">
         {wishlist && wishlist.length === 0 ? (
           <div className="w-full h-screen flex items-center justify-center">
             <div className="left-10 z-50 fixed top-2">
@@ -38,7 +38,7 @@ const Wishlist = ({ setOpenWishlist }) => {
         ) : (
           <>
             <div>
-              <div className="flex w-full justify-between pt-5 pb-2 pl-5">
+              <div className="z-30 flex w-full justify-between pt-5 pb-2 pl-5">
                 <p className="pr-5 text-lg font-semibold">تم اضافة{wishlist.length} عناصر</p>
                 <RxCross1
                   size={20}
