@@ -26,7 +26,6 @@ const AdminHeader = () => {
 
       <div className="flex items-center">
         <div className="flex items-center mr-4">
-          <h1 className="text-2xl font-semibold mr-2">ADMIN</h1>
           {/* <Link to="/dashboard/cupouns" className="800px:block hidden">
             <AiOutlineGift
               color="#555"
