@@ -135,7 +135,7 @@ const ProductDetails = ({ data }) => {
                         <img
                           src={`${i?.url}`}
                           alt=""
-                          className="w-[120px] overflow-hidden mr-3 mt-3"
+                          className="w-[90px] overflow-hidden mr-3 mt-3"
                           onClick={() => setSelect(index)}
                         />
                       </div>
