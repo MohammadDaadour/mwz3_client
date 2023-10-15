@@ -217,11 +217,11 @@ const PaymentInfo = ({
             className="w-[25px] h-[25px] rounded-full bg-transparent border-[3px] border-gray-300 relative flex items-center justify-center"
             // onClick={() => setSelect(1)}
           >
-            {select === 3 ? (
+            {/* {select === 3 ? (
               <div className="w-[13px] h-[13px] bg-[#1d1a1acb] rounded-full" />
             ) : (
               <div className="w-[13px] h-[13px] bg-gray-300 rounded-full" />
-            )}
+            )} */}
           </div>
           <h4 className="text-[18px] pr-2 font-[600] text-gray-300">
             الدفع بالبطاقات الائتمانية (قريبا)
@@ -230,96 +230,97 @@ const PaymentInfo = ({
 
         {/* pay with card */}
         {select === 3 ? (
-          <div className="w-full flex border-b">
-            <form className="w-full" onSubmit={paymentHandler}>
-              <div className="w-full flex pb-3">
-                <div className="w-[50%]">
-                  <label className="block pb-2">Name On Card</label>
-                  <input
-                    required
-                    placeholder={user && user.name}
-                    className={`${styles.input} !w-[95%] text-[#444]`}
-                    value={user && user.name}
-                  />
-                </div>
-                <div className="w-[50%]">
-                  <label className="block pb-2">Exp Date</label>
-                  <CardExpiryElement
-                    className={`${styles.input}`}
-                    options={{
-                      style: {
-                        base: {
-                          fontSize: "19px",
-                          lineHeight: 1.5,
-                          color: "#444",
-                        },
-                        empty: {
-                          color: "#3a120a",
-                          backgroundColor: "transparent",
-                          "::placeholder": {
-                            color: "#444",
-                          },
-                        },
-                      },
-                    }}
-                  />
-                </div>
-              </div>
+        //   <div className="w-full flex border-b">
+        //     <form className="w-full" onSubmit={paymentHandler}>
+        //       <div className="w-full flex pb-3">
+        //         <div className="w-[50%]">
+        //           <label className="block pb-2">Name On Card</label>
+        //           <input
+        //             required
+        //             placeholder={user && user.name}
+        //             className={`${styles.input} !w-[95%] text-[#444]`}
+        //             value={user && user.name}
+        //           />
+        //         </div>
+        //         <div className="w-[50%]">
+        //           <label className="block pb-2">Exp Date</label>
+        //           <CardExpiryElement
+        //             className={`${styles.input}`}
+        //             options={{
+        //               style: {
+        //                 base: {
+        //                   fontSize: "19px",
+        //                   lineHeight: 1.5,
+        //                   color: "#444",
+        //                 },
+        //                 empty: {
+        //                   color: "#3a120a",
+        //                   backgroundColor: "transparent",
+        //                   "::placeholder": {
+        //                     color: "#444",
+        //                   },
+        //                 },
+        //               },
+        //             }}
+        //           />
+        //         </div>
+        //       </div>
 
-              {/*   {<div className="w-full flex pb-3">
-                <div className="w-[50%]">
-                  <label className="block pb-2">Card Number</label>
-                  <CardNumberElement
-                    className={`${styles.input} !h-[35px] !w-[95%]`}
-                    options={{
-                      style: {
-                        base: {
-                          fontSize: "19px",
-                          lineHeight: 1.5,
-                          color: "#444",
-                        },
-                        empty: {
-                          color: "#3a120a",
-                          backgroundColor: "transparent",
-                          "::placeholder": {
-                            color: "#444",
-                          },
-                        },
-                      },
-                    }}
-                  />
-                </div>
-                <div className="w-[50%]">
-                  <label className="block pb-2">CVV</label>
-                  <CardCvcElement
-                    className={`${styles.input} !h-[35px]`}
-                    options={{
-                      style: {
-                        base: {
-                          fontSize: "19px",
-                          lineHeight: 1.5,
-                          color: "#444",
-                        },
-                        empty: {
-                          color: "#3a120a",
-                          backgroundColor: "transparent",
-                          "::placeholder": {
-                            color: "#444",
-                          },
-                        },
-                      },
-                    }}
-                  />
-                </div>
-              </div>} */}
-              <input
-                type="submit"
-                value="Submit"
-                className={`${styles.button} !bg-[#f63b60] text-[#fff] h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
-              />
-            </form>
-          </div>
-        ) : null}
+        //       {/*   {<div className="w-full flex pb-3">
+        //         <div className="w-[50%]">
+        //           <label className="block pb-2">Card Number</label>
+        //           <CardNumberElement
+        //             className={`${styles.input} !h-[35px] !w-[95%]`}
+        //             options={{
+        //               style: {
+        //                 base: {
+        //                   fontSize: "19px",
+        //                   lineHeight: 1.5,
+        //                   color: "#444",
+        //                 },
+        //                 empty: {
+        //                   color: "#3a120a",
+        //                   backgroundColor: "transparent",
+        //                   "::placeholder": {
+        //                     color: "#444",
+        //                   },
+        //                 },
+        //               },
+        //             }}
+        //           />
+        //         </div>
+        //         <div className="w-[50%]">
+        //           <label className="block pb-2">CVV</label>
+        //           <CardCvcElement
+        //             className={`${styles.input} !h-[35px]`}
+        //             options={{
+        //               style: {
+        //                 base: {
+        //                   fontSize: "19px",
+        //                   lineHeight: 1.5,
+        //                   color: "#444",
+        //                 },
+        //                 empty: {
+        //                   color: "#3a120a",
+        //                   backgroundColor: "transparent",
+        //                   "::placeholder": {
+        //                     color: "#444",
+        //                   },
+        //                 },
+        //               },
+        //             }}
+        //           />
+        //         </div>
+        //       </div>} */}
+        //       <input
+        //         type="submit"
+        //         value="Submit"
+        //         className={`${styles.button} !bg-[#f63b60] text-[#fff] h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
+        //       />
+        //     </form>
+        //   </div>
+        // ) 
+        null ) : null}
       </div>
 
       <br />
@@ -330,11 +331,11 @@ const PaymentInfo = ({
             className="w-[25px] h-[25px] rounded-full bg-transparent border-[3px] border-gray-300 relative flex items-center justify-center"
             // onClick={() => setSelect(2)}
           >
-            {select === 2 ? (
+            {/* {select === 2 ? (
               <div className="w-[13px] h-[13px] bg-gray-300 rounded-full" />
             ) : (
               <div className="w-[13px] h-[13px] bg-gray-300 rounded-full" />
-            )}
+            )} */}
           </div>
           <h4 className="text-[18px] pr-2 font-[600] text-gray-300">
             الدفع عن طريق paypal (قريبا)
@@ -342,7 +343,7 @@ const PaymentInfo = ({
         </div>
 
         {/* pay with payement */}
-        {select === 2 ? (
+        {/* {select === 2 ? (
           <div className="w-full flex border-b">
             <div
               className={`${styles.button} !bg-[#f63b60] text-white h-[45px] rounded-[5px] cursor-pointer text-[18px] font-[600]`}
@@ -376,7 +377,7 @@ const PaymentInfo = ({
               </div>
             )}
           </div>
-        ) : null}
+        ) : null} */}
       </div>
 
       <br />
