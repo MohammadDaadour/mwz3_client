@@ -58,97 +58,97 @@ const Payment = () => {
     totalPrice: orderData?.totalPrice,
   };
 
-  const onApprove = async (data, actions) => {
-    return actions.order.capture().then(function (details) {
-      const { payer } = details;
+  // const onApprove = async (data, actions) => {
+  //   return actions.order.capture().then(function (details) {
+  //     const { payer } = details;
 
-      let paymentInfo = payer;
+  //     let paymentInfo = payer;
 
-      if (paymentInfo !== undefined) {
-        paypalPaymentHandler(paymentInfo);
-      }
-    });
-  };
+  //     if (paymentInfo !== undefined) {
+  //       paypalPaymentHandler(paymentInfo);
+  //     }
+  //   });
+  // };
 
-  const paypalPaymentHandler = async (paymentInfo) => {
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
+  // const paypalPaymentHandler = async (paymentInfo) => {
+  //   const config = {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   };
 
-    order.paymentInfo = {
-      id: paymentInfo.payer_id,
-      status: "succeeded",
-      type: "Paypal",
-    };
+  //   order.paymentInfo = {
+  //     id: paymentInfo.payer_id,
+  //     status: "succeeded",
+  //     type: "Paypal",
+  //   };
 
-    await axios
-      .post(`${server}/order/create-order`, order, config)
-      .then((res) => {
-        setOpen(false);
-        navigate("/order/success");
-        toast.success("Order successful!");
-        localStorage.setItem("cartItems", JSON.stringify([]));
-        localStorage.setItem("latestOrder", JSON.stringify([]));
-        window.location.reload();
-      });
-  };
+  //   await axios
+  //     .post(`${server}/order/create-order`, order, config)
+  //     .then((res) => {
+  //       setOpen(false);
+  //       navigate("/order/success");
+  //       toast.success("Order successful!");
+  //       localStorage.setItem("cartItems", JSON.stringify([]));
+  //       localStorage.setItem("latestOrder", JSON.stringify([]));
+  //       window.location.reload();
+  //     });
+  // };
 
   const paymentData = {
     amount: Math.round(orderData?.totalPrice * 100),
   };
 
-  const paymentHandler = async (e) => {
-    e.preventDefault();
-    try {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
+  // const paymentHandler = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const config = {
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     };
 
-      const { data } = await axios.post(
-        `${server}/payment/process`,
-        paymentData,
-        config
-      );
+  //     const { data } = await axios.post(
+  //       `${server}/payment/process`,
+  //       paymentData,
+  //       config
+  //     );
 
-      const client_secret = data.client_secret;
+      // const client_secret = data.client_secret;
 
-      if (!stripe || !elements) return;
-      const result = await stripe.confirmCardPayment(client_secret, {
-        payment_method: {
-          card: elements.getElement(CardNumberElement), //stripe
-        },
-      });
+      // if (!stripe || !elements) return;
+      // const result = await stripe.confirmCardPayment(client_secret, {
+      //   payment_method: {
+      //     card: elements.getElement(CardNumberElement), //stripe
+      //   },
+      // });
 
-      if (result.error) {
-        toast.error(result.error.message);
-      } else {
-        if (result.paymentIntent.status === "succeeded") {
-          order.paymnentInfo = {
-            id: result.paymentIntent.id,
-            status: result.paymentIntent.status,
-            type: "Credit Card",
-          };
+      // if (result.error) {
+      //   toast.error(result.error.message);
+      // } else {
+      //   if (result.paymentIntent.status === "succeeded") {
+      //     order.paymnentInfo = {
+      //       id: result.paymentIntent.id,
+      //       status: result.paymentIntent.status,
+      //       type: "Credit Card",
+      //     };
 
-          await axios
-            .post(`${server}/order/create-order`, order, config)
-            .then((res) => {
-              setOpen(false);
-              navigate("/order/success");
-              toast.success("Order successful!");
-              localStorage.setItem("cartItems", JSON.stringify([]));
-              localStorage.setItem("latestOrder", JSON.stringify([]));
-              window.location.reload();
-            });
-        }
-      }
-    } catch (error) {
-      toast.error(error);
-    }
-  };
+  //         await axios
+  //           .post(`${server}/order/create-order`, order, config)
+  //           .then((res) => {
+  //             setOpen(false);
+  //             navigate("/order/success");
+  //             toast.success("Order successful!");
+  //             localStorage.setItem("cartItems", JSON.stringify([]));
+  //             localStorage.setItem("latestOrder", JSON.stringify([]));
+  //             window.location.reload();
+  //           });
+  //       }
+  //     }
+  //   } catch (error) {
+  //     toast.error(error);
+  //   }
+  // };
 
   const cashOnDeliveryHandler = async (e) => {
     e.preventDefault();
@@ -183,9 +183,9 @@ const Payment = () => {
             user={user}
             open={open}
             setOpen={setOpen}
-            onApprove={onApprove}
+            // onApprove={onApprove}
             createOrder={createOrder}
-            paymentHandler={paymentHandler}
+            // paymentHandler={paymentHandler}
             cashOnDeliveryHandler={cashOnDeliveryHandler}
           />
         </div>
