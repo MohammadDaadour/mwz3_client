@@ -78,7 +78,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      {stripeApikey && (
+      {/* {stripeApikey && (
         <Elements stripe={loadStripe(stripeApikey)}>
           <Routes>
             <Route
@@ -91,11 +91,19 @@ const App = () => {
             />
           </Routes>
         </Elements>
-      )}
+      )} */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/sign-up" element={<SignupPage />} />
+        <Route
+              path="/payment"
+              element={
+                <ProtectedRoute>
+                  <PaymentPage />
+                </ProtectedRoute>
+              }
+            />
         <Route
           path="/activation/:activation_token"
           element={<ActivationPage />}
