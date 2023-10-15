@@ -27,7 +27,7 @@ const Checkout = () => {
   }, []);
 
   const paymentSubmit = () => {
-   if(address1 === "" || address2 === "" || zipCode === null || country === "" || city === ""){
+   if(address1 === "" || country === "" || city === ""){
       toast.error("! من فضلك املأ البيانات المطلوبة")
    } else{
     const shippingAddress = {
