@@ -18,7 +18,9 @@ import { addTocart } from "../../redux/actions/cart";
 import { toast } from "react-toastify";
 import Ratings from "./Ratings";
 import axios from "axios";
-
+import heart from "./heart.png";
+import heartAdded from "./heardAdded.png";
+import message from "./chat.png";
 const ProductDetails = ({ data }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
   const { cart } = useSelector((state) => state.cart);
@@ -85,10 +87,9 @@ const ProductDetails = ({ data }) => {
       0
     );
 
-  const avg =  totalRatings / totalReviewsLength || 0;
+  const avg = totalRatings / totalReviewsLength || 0;
 
   const averageRating = avg.toFixed(2);
-
 
   const handleMessageSubmit = async () => {
     if (isAuthenticated) {
@@ -130,7 +131,9 @@ const ProductDetails = ({ data }) => {
                       <div
                         className={`${
                           select === 0 ? "border" : "null"
-                        } rounded-lg hover:shadow-lg cursor-pointer p-2 border ${index % 4 ===0 ? "mr-0" : "mr-2"} ml-2 my-2 border w-[90px] h-[90px] flex justify-center items-center bg-white`}
+                        } rounded-lg hover:shadow-lg cursor-pointer p-2 border ${
+                          index % 4 === 0 ? "mr-0" : "mr-2"
+                        } ml-2 my-2 border w-[90px] h-[90px] flex justify-center items-center bg-white`}
                       >
                         <img
                           src={`${i?.url}`}
@@ -170,20 +173,18 @@ const ProductDetails = ({ data }) => {
                   </div>
                   <div>
                     {click ? (
-                      <AiFillHeart
-                        size={30}
-                        className="cursor-pointer"
+                      <img
                         onClick={() => removeFromWishlistHandler(data)}
-                        color={click ? "red" : "#333"}
-                        title="Remove from wishlist"
+                        src={heart}
+                        className="w-[30px] h-[30px] cursor-pointer"
+                        alt="Remove from wishlist"
                       />
                     ) : (
-                      <AiOutlineHeart
-                        size={30}
-                        className="cursor-pointer"
+                      <img
                         onClick={() => addToWishlistHandler(data)}
-                        color={click ? "red" : "#333"}
-                        title="Add to wishlist"
+                        src={heartAdded}
+                        className="w-[30px] h-[30px] cursor-pointer"
+                        alt="Add to wishlist"
                       />
                     )}
                   </div>
@@ -192,40 +193,41 @@ const ProductDetails = ({ data }) => {
                   className={`duration-200 px-4 text-lg font-semibold !mt-6 flex items-center justify-between`}
                   onClick={() => addToCartHandler(data._id)}
                 >
-                  <span className= "cursor-pointer bg-orange-600 text-white w-[200px] p-2 py-4 rounded-full justify-center flex items-center">
-                    أضف الي العربة <AiOutlineShoppingCart width={35} className="mr-1" />
+                  <span className="cursor-pointer bg-orange-600 text-white w-[200px] p-2 py-4 rounded-full justify-center flex items-center">
+                    أضف الي العربة{" "}
+                    <AiOutlineShoppingCart width={35} className="mr-1" />
                   </span>
                   <div className="flex pt-3">
-                  <h4 className={`${styles.productDiscountPrice}`}>
-                    {data.discountPrice}$
-                  </h4>
-                </div>
+                    <h4 className={`${styles.productDiscountPrice}`}>
+                      {data.discountPrice} ج.م
+                    </h4>
+                  </div>
                 </div>
                 <div className="flex justify-between items-center pt-8">
                   <div className="flex items-center">
-                  <Link to={`/shop/preview/${data?.shop._id}`}>
-                    <img
-                      src={`${data?.shop?.avatar?.url}`}
-                      alt=""
-                      className="w-[50px] h-[50px] rounded-full"
-                    />
-                  </Link>
-                  <div className="pr-8">
                     <Link to={`/shop/preview/${data?.shop._id}`}>
-                      <h3 className={`text-2xl text-gray-800 whitespace-nowrap`}>
-                        {data.shop.name}
-                      </h3>
+                      <img
+                        src={`${data?.shop?.avatar?.url}`}
+                        alt=""
+                        className="w-[50px] h-[50px] rounded-full"
+                      />
                     </Link>
-                    <h5 className=" text-[15px]">
-                    التقييمات     ({averageRating}/5) 
-                    </h5>
+                    <div className="pr-8">
+                      <Link to={`/shop/preview/${data?.shop._id}`}>
+                        <h3
+                          className={`text-2xl text-gray-800 whitespace-nowrap`}
+                        >
+                          {data.shop.name}
+                        </h3>
+                      </Link>
+                      <h5 className=" text-[15px]">
+                        التقييمات ({averageRating}/5)
+                      </h5>
                     </div>
                   </div>
-                  <div
-                    onClick={handleMessageSubmit}
-                  >
+                  <div onClick={handleMessageSubmit}>
                     <button className="flex items-center justify-center bg-gray-100 p-2 rounded-full">
-                      <AiOutlineMessage className="text-4xl" />
+                      <img src={message} alt="" className="w-[45px]" />
                     </button>
                   </div>
                 </div>
@@ -277,7 +279,7 @@ const ProductDetailsInfo = ({
             }
             onClick={() => setActive(2)}
           >
-           تقييمات بعد الشراء
+            تقييمات بعد الشراء
           </h5>
           {active === 2 ? (
             <div className={`${styles.active_indicator}`} />
@@ -344,9 +346,11 @@ const ProductDetailsInfo = ({
                   alt=""
                 />
                 <div className="pr-3">
-                  <h3 className={`text-lg text-blue-800 underline`}>{data.shop.name}</h3>
+                  <h3 className={`text-lg text-blue-800 underline`}>
+                    {data.shop.name}
+                  </h3>
                   <h5 className="pb-2 text-[15px]">
-                  التقييمات ({averageRating}/5) 
+                    التقييمات ({averageRating}/5)
                   </h5>
                 </div>
               </div>
@@ -372,9 +376,7 @@ const ProductDetailsInfo = ({
                 <span className="font-[500]">{totalReviewsLength}</span>
               </h5>
               <Link to="/">
-                <div
-                  className={`${styles.button}  text-center p-1 mt-3 `}
-                >
+                <div className={`${styles.button}  text-center p-1 mt-3 `}>
                   <h4>زر صفحة البائع</h4>
                 </div>
               </Link>
