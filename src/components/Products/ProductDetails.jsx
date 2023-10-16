@@ -150,28 +150,19 @@ const ProductDetails = ({ data }) => {
               <div className="w-full 800px:w-[50%] pt-5">
                 <h1 className={`${styles.productTitle}`}>{data.name}</h1>
                 <p>{data.description}</p>
-                <div className="flex pt-3">
-                  <h4 className={`${styles.productDiscountPrice}`}>
-                    {data.discountPrice}$
-                  </h4>
-                  <h3 className={`${styles.price}`}>
-                    {data.originalPrice ? data.originalPrice + "$" : null}
-                  </h3>
-                </div>
-
                 <div className="flex items-center mt-12 justify-between pr-3">
                   <div>
                     <button
-                      className="border from-teal-400 to-teal-500 text-black font-bold px-4 py-2 shadow-lg hover:opacity-75 transition duration-300 ease-in-out text-2xl"
+                      className="from-teal-400 to-teal-500 text-black font-bold px-4 py-2 hover:opacity-75 transition duration-300 ease-in-out text-2xl"
                       onClick={decrementCount}
                     >
                       -
                     </button>
-                    <span className="bg-gray-200 text-gray-800 text-2xl font-medium px-4 py-2">
+                    <span className="bg-gray-100 text-gray-800 text-2xl font-medium px-4 py-2">
                       {count}
                     </span>
                     <button
-                      className="border from-teal-400 to-teal-500 text-black font-bold px-4 py-2 shadow-lg hover:opacity-75 transition duration-300 ease-in-out text-2xl"
+                      className="from-teal-400 to-teal-500 text-black font-bold px-4 py-2 hover:opacity-75 transition duration-300 ease-in-out text-2xl"
                       onClick={incrementCount}
                     >
                       +
@@ -198,12 +189,17 @@ const ProductDetails = ({ data }) => {
                   </div>
                 </div>
                 <div
-                  className={`cursor-pointer hover:bg-red-800 duration-200 px-4 bg-red-600 text-white text-lg font-semibold !mt-6 !h-11 flex items-center`}
+                  className={`duration-200 px-4 text-lg font-semibold !mt-6 flex items-center justify-between`}
                   onClick={() => addToCartHandler(data._id)}
                 >
-                  <span className= "flex items-center">
+                  <span className= "cursor-pointer bg-orange-600 text-white w-[200px] p-2 py-4 rounded-full justify-center flex items-center">
                     أضف الي العربة <AiOutlineShoppingCart width={35} className="mr-1" />
                   </span>
+                  <div className="flex pt-3">
+                  <h4 className={`${styles.productDiscountPrice}`}>
+                    {data.discountPrice}$
+                  </h4>
+                </div>
                 </div>
                 <div className="flex justify-between items-center pt-8">
                   <div className="flex items-center">
@@ -216,7 +212,7 @@ const ProductDetails = ({ data }) => {
                   </Link>
                   <div className="pr-8">
                     <Link to={`/shop/preview/${data?.shop._id}`}>
-                      <h3 className={`text-lg text-blue-800 underline`}>
+                      <h3 className={`text-2xl text-gray-800 whitespace-nowrap`}>
                         {data.shop.name}
                       </h3>
                     </Link>
@@ -226,11 +222,10 @@ const ProductDetails = ({ data }) => {
                     </div>
                   </div>
                   <div
-                    className={`${styles.button}  mt-4  !h-11`}
                     onClick={handleMessageSubmit}
                   >
-                    <button className="flex items-center justify-center">
-                     <p className="relative bottom-[1.5px]"> راسل البائع </p><AiOutlineMessage className="mr-1" />
+                    <button className="flex items-center justify-center bg-gray-100 p-2 rounded-full">
+                      <AiOutlineMessage className="text-4xl" />
                     </button>
                   </div>
                 </div>

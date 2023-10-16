@@ -10,7 +10,7 @@ const Navbar = ({active}) => {
             navItems && navItems.map((i,index) => (
                 <div className="flex">
                     <Link to={i.url}
-                    className={`${active === index + 1 ? " 800px:bg-gray-100  800px:border-b-gray-700" : ""} font-[500] px-6 cursor-pointer} 800px:hover:bg-gray-100 duration-300 p-3 800px:hover:border-b-2 hover:border-b-gray-700 800px:border-b-2`}
+                    className={`${active === index + 1 ? " 800px:bg-gray-100  800px:border-b-gray-700" : ""} font-[500] px-6 cursor-pointer} 800px:hover:bg-gray-100 duration-300 p-3 800px:hover:border-b-2 hover:border-b-gray-700`}
                     >
                     {i.title}
                     </Link>
