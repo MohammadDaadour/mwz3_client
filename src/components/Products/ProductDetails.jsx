@@ -61,14 +61,14 @@ const ProductDetails = ({ data }) => {
   const addToCartHandler = (id) => {
     const isItemExists = cart && cart.find((i) => i._id === id);
     if (isItemExists) {
-      toast.error("Item already in cart!");
+      toast.error("المنتج موجود بالفعل في العربة");
     } else {
       if (data.stock < 1) {
-        toast.error("Product stock limited!");
+        toast.error("المنتج غير متوفر حاليا");
       } else {
         const cartData = { ...data, qty: count };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("تم اضافة المنتج الي العربة");
       }
     }
   };
@@ -108,7 +108,7 @@ const ProductDetails = ({ data }) => {
           toast.error(error.response.data.message);
         });
     } else {
-      toast.error("Please login to create a conversation");
+      toast.error("قم يتسجيل الدخول أولا");
     }
   };
 
@@ -122,7 +122,7 @@ const ProductDetails = ({ data }) => {
                 <img
                   src={`${data && data.images[select]?.url}`}
                   alt=""
-                  className="w-[90%] 800px:w-[80%] border"
+                  className="w-[90%] 800px:w-[80%]"
                 />
                 <div className="w-full flex">
                   {data &&
@@ -130,12 +130,12 @@ const ProductDetails = ({ data }) => {
                       <div
                         className={`${
                           select === 0 ? "border" : "null"
-                        } cursor-pointer`}
+                        } rounded-lg hover:shadow-lg cursor-pointer p-2 border ${index % 4 ===0 ? "mr-0" : "mr-2"} ml-2 my-2 border w-[90px] h-[90px] flex justify-center items-center bg-white`}
                       >
                         <img
                           src={`${i?.url}`}
                           alt=""
-                          className="w-[90px] overflow-hidden mr-3 mt-3"
+                          className="overflow-hidden"
                           onClick={() => setSelect(index)}
                         />
                       </div>
