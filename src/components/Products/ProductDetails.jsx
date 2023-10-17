@@ -19,7 +19,7 @@ import { toast } from "react-toastify";
 import Ratings from "./Ratings";
 import axios from "axios";
 import heart from "./heart.png";
-import heartAdded from "./heardAdded.png";
+import heartAdded from "./heartAdded.png";
 import message from "./chat.png";
 const ProductDetails = ({ data }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
