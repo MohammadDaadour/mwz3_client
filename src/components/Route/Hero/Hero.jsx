@@ -25,7 +25,7 @@ const Hero = () => {
             className={`bg-white text-black p-2 px-6 rounded-full mt-5 border-black hover:text-red-600 text-black text-[18px]`}
           >
             ابدأ التسوق
-          </div>
+          </div> 
         </Link>
       </div>
     </div>
