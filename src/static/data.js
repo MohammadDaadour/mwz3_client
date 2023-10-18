@@ -10,6 +10,9 @@ const sungalsses = require("./sunglasses.png");
 const tablet = require("./tablet.png");
 const sweetshirt = require("./sweatshirt.png");
 const shoppingbag = require("./shopping-bag.png");
+const cars = require("./electric-car.png");
+const realEstate = require('./house.png');
+
 export const navItems = [
   {
     title: "الرئيسية",
@@ -89,21 +92,19 @@ export const categoriesData = [
     subTitle: "",
     image_Url: shoes,
   },
-  /*{
+  {
        id: 6,
-    title: "Gifts",
+    title: "سيارات",
     subTitle: "",
-    image_Url:
-      "https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg",
-      
-  },*/
-  /* {
+    image_Url: cars,
+  },
+   {
       id: 7,
-    title: "Pet Care",
+    title: "عقارات",
     subTitle: "",
-    image_Url: "https://cdn.openpr.com/T/c/Tc15444071_g.jpg",
+    image_Url: realEstate,
     
-  },*/
+  },
   {
     id: 8,
     title: "هواتف و أجهزة لوحية",

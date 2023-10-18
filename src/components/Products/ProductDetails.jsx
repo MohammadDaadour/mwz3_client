@@ -19,7 +19,7 @@ import { toast } from "react-toastify";
 import Ratings from "./Ratings";
 import axios from "axios";
 import heart from "./heart.png";
-import heartAdded from "./heardAdded.png";
+import heartAdded from "./heartAdded.png";
 import message from "./chat.png";
 const ProductDetails = ({ data }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
@@ -175,14 +175,14 @@ const ProductDetails = ({ data }) => {
                     {click ? (
                       <img
                         onClick={() => removeFromWishlistHandler(data)}
-                        src={heart}
+                        src={heartAdded}
                         className="w-[30px] h-[30px] cursor-pointer"
                         alt="Remove from wishlist"
                       />
                     ) : (
                       <img
                         onClick={() => addToWishlistHandler(data)}
-                        src={heartAdded}
+                        src={heart}
                         className="w-[30px] h-[30px] cursor-pointer"
                         alt="Add to wishlist"
                       />
