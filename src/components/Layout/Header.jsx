@@ -88,7 +88,7 @@ const Header = ({ activeHeading }) => {
               onChange={handleSearchChange}
               className="h-[40px] w-full px-2 focus:border-red-600 border"
             />
-            <div className="absolute w-full bg-white shadow-sm-2 z-[9]">
+            <div className="absolute w-full bg-white shadow-sm-2 z-[30]">
               {filteredItems.map((i, index) => {
                 return (
                   <Link to={`/product/${i._id}`}>
