@@ -12,6 +12,14 @@ const sweetshirt = require("./sweatshirt.png");
 const shoppingbag = require("./shopping-bag.png");
 const cars = require("./electric-car.png");
 const realEstate = require('./house.png');
+const LapAndComp = require('./LapAndComp-removebg-preview.png');
+const mobileFront = require('./mobileFront.png');
+const realEstateFront = require('./realEstateFront.png');
+const shampooFront = require('./shampooFront.png');
+const sweetshirtFront = require('./sweetshirtFront.png');
+const carFront = require('./carFront.png'); 
+const shoesFront = require('./men-shoes.png');
+const accFront = require('./accFront.png');
 
 export const navItems = [
   {
@@ -125,6 +133,58 @@ export const categoriesData = [
     image_Url: shoppingbag,
   },
 ];
+
+export const categoriesSwip = [
+  {
+    id: 1,
+    title: "أجهزة كمبيوتر و لابتوب",
+    subTitle: "",
+    image_Url: LapAndComp,
+  },
+  {
+    id: 2,
+    title: "منتجات العناية الشخصية",
+    subTitle: "",
+    image_Url: shampooFront,
+  },
+  {
+    id: 3,
+    title: "اكسسوارات",
+    subTitle: "",
+    image_Url: accFront,
+  },
+  {
+    id: 4,
+    title: "ملابس",
+    subTitle: "",
+    image_Url: sweetshirtFront,
+  },
+  {
+    id: 5,
+    title: "أحذية",
+    subTitle: "",
+    image_Url: shoesFront,
+  },
+  {
+       id: 6,
+    title: "سيارات",
+    subTitle: "",
+    image_Url: carFront,
+  },
+   {
+      id: 7,
+    title: "عقارات",
+    subTitle: "",
+    image_Url: realEstateFront,
+    
+  },
+  {
+    id: 8,
+    title: "هواتف و أجهزة لوحية",
+    subTitle: "",
+    image_Url: mobileFront,
+  }
+]
 
 // product Data
 export const productData = [
