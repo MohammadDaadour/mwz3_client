@@ -11,11 +11,12 @@ const IcoSwiper = ({ categoriesData}) => {
   return (
     <>
       {categoriesData &&
-        categoriesData.map((category) => {
+        categoriesData.map((i, index) => {
           return (
             <img
               className="w-[60px] rounded-lg bg-gray-100 p-2 px-4 mx-4 cursor-pointer"
-              src={category.image_Url}
+              key={index}
+              src={i.image_Url}
               alt=""
               onClick={submitHandle}
             />
