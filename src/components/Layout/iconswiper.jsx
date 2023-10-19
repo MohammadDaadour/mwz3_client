@@ -18,7 +18,7 @@ const IcoSwiper = ({ categoriesData}) => {
               key={index}
               src={i.image_Url}
               alt=""
-              onClick={submitHandle}
+              onClick={submitHandle(i)}
             />
           );
         })}
