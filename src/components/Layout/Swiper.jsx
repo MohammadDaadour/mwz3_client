@@ -33,13 +33,13 @@ const SwiperFun = () => {
             className={`flex items-center bg-orange-400 w-full h-[80vh] w-full rounded-r-full text-black`}
             onClick={() => submitHandle(i)}
           >
-            <div className="w-full flex flex-col items-center ">
+            <div className="h-96 w-full flex flex-col items-center ">
               <img
-                className="h-96 relative cursor-pointer"
+                className="h-72 relative cursor-pointer"
                 src={i.image_Url}
                 alt=""
               />
-              <h3 className="select-none  cursor-pointer p-2 relative bottom-8 bg-white text-orange-600 font-semibold text-lg rounded-full px-4 my-2">{i.title}</h3>
+              <h3 className="select-none  cursor-pointer p-2 relative bg-white text-orange-600 font-semibold text-lg rounded-full px-4">{i.title}</h3>
             </div>
           </SwiperSlide>
         ))}

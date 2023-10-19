@@ -83,3 +83,30 @@ input[type=number] {
   }
 }
 
+.swiper-button-next, .swiper-button-prev {
+  color: black;
+}
+
+::-webkit-scrollbar {
+  height: 3px; /* Set the width of the scrollbar track */
+  width:3px;
+  margin: 3px;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: transparent; /* Set the background color of the scrollbar thumb */
+  border-radius: 6px; /* Add rounded corners to the thumb */
+}
+
+/* Customize the scrollbar track on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Change the background color on hover */
+}
+
+/* Firefox */
+/* Set the width of the scrollbar */
+scrollbar-width: thin;
+
+/* Customize the scrollbar thumb */
+scrollbar-color: #333 #f0f0f0

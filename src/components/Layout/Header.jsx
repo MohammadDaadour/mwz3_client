@@ -16,6 +16,7 @@ import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
+import IcoSwiper from "./iconswiper";
 const heart = require("./images/heart.png");
 const shoppingCart = require("./images/shopping-cart.png");
 const pfp = require("./images/user.png");
@@ -266,6 +267,7 @@ const Header = ({ activeHeading }) => {
                 {cart && cart.length}
               </span>
             </div>
+            
           </div>
           {/* cart popup */}
           {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
@@ -273,7 +275,9 @@ const Header = ({ activeHeading }) => {
           {/* wishlist popup */}
           {openWishlist ? <Wishlist setOpenWishlist={setOpenWishlist} /> : null}
         </div>
-
+        <div className="flex overflow-x-scroll p-2 border-t">
+          <IcoSwiper categoriesData = {categoriesData} />
+        </div>
         {/* header sidebar */}
         {open && (
           <div
