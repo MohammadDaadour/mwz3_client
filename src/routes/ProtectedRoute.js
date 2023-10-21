@@ -11,7 +11,7 @@ const ProtectedRoute = ({ children }) => {
     return children;
   }
   else {
-    return <Loader />
+    return <Loader />;
   }
 };
 

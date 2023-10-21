@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styles from "../../../styles/styles";
 import SwiperFun from "../../Layout/Swiper";
 
-const bg = require("../../../wallpaper.jpg");
 const lapAndComp = require("./LapAndComp-removebg-preview.png");
 
 const Hero = () => {
