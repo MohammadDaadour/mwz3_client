@@ -60,6 +60,8 @@ import axios from "axios";
 import { server } from "./server";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
+import PasswordReset from "./components/ForgotPassword/PasswordReset";
 
 const App = () => {
   const [stripeApikey, setStripeApiKey] = useState("");
@@ -95,6 +97,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/login/forgot-password" element={<ForgotPassword />} />
+        <Route path="/login/reset-password/:id/:token" element={<PasswordReset />} />
         <Route path="/sign-up" element={<SignupPage />} />
         <Route
               path="/payment"
