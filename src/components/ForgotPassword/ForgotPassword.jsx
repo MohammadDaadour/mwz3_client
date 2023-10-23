@@ -19,8 +19,8 @@ const ForgotPassword = () => {
         email,
       })
       .then((res) => {
-        toast.success("check you email!")
         window.location.reload(true);
+        toast.success(`check you email! ${email}`);
       })
       .catch((err) => {
         toast.error(err.response.data.message);
