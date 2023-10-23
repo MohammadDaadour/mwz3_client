@@ -142,7 +142,7 @@ const Header = ({ activeHeading }) => {
         <div
           className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
         >
-          {/* categories */}
+          {/*  // categories
           <div className="h-full flex" onClick={() => setDropDown(!dropDown)}>
             <div className="flex relative w-[270px] hidden 1000px:block">
               {
@@ -165,7 +165,7 @@ const Header = ({ activeHeading }) => {
                 />
               ) : null}
             </div>
-          </div>
+          </div> */}
           {/* navitems */}
           <div className={`${styles.noramlFlex} duration-300`}>
             <Navbar active={activeHeading} />
@@ -228,6 +228,9 @@ const Header = ({ activeHeading }) => {
           </div>
         </div>
       </div>
+      <div className="flex overflow-x-scroll p-2 justify-around bg-orange-400">
+        <IcoSwiper categoriesData={categoriesData} />
+      </div>
 
       {/* mobile header */}
       <div
@@ -267,7 +270,6 @@ const Header = ({ activeHeading }) => {
                 {cart && cart.length}
               </span>
             </div>
-            
           </div>
           {/* cart popup */}
           {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
@@ -276,7 +278,7 @@ const Header = ({ activeHeading }) => {
           {openWishlist ? <Wishlist setOpenWishlist={setOpenWishlist} /> : null}
         </div>
         <div className="flex overflow-x-scroll p-2 border-t">
-          <IcoSwiper categoriesData = {categoriesData} />
+          <IcoSwiper categoriesData={categoriesData} />
         </div>
         {/* header sidebar */}
         {open && (
