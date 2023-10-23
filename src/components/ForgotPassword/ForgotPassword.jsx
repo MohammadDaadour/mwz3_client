@@ -19,7 +19,7 @@ const ForgotPassword = () => {
         email,
       })
       .then((res) => {
-        navigate("/login-user");
+        toast.success("check you email!")
         window.location.reload(true);
       })
       .catch((err) => {

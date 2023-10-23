@@ -20,7 +20,7 @@ const PasswordReset = () => {
         password,
       })
       .then((res) => {
-        navigate("/login-user");
+        navigate("/login");
         window.location.reload(true);
       })
       .catch((err) => {
