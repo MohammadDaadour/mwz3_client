@@ -228,7 +228,7 @@ const Header = ({ activeHeading }) => {
           </div>
         </div>
       </div>
-      <div className="flex overflow-x-scroll p-2 justify-around bg-orange-400">
+      <div className="hidden 800px:flex overflow-x-scroll p-2 justify-around bg-orange-400">
         <IcoSwiper categoriesData={categoriesData} />
       </div>
 
