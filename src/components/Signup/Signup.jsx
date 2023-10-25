@@ -6,6 +6,7 @@ import { RxAvatar } from "react-icons/rx";
 import axios from "axios";
 import { server } from "../../server";
 import { toast } from "react-toastify";
+import Terms from "../Terms/Terms";
 
 const Singup = () => {
   const [email, setEmail] = useState("");
@@ -43,8 +44,22 @@ const Singup = () => {
       });
   };
 
+  const [active1, setActive1] = useState(false);
+  const [active2, setActive2] = useState(false);
+
+  const handleActive1 = () => {
+    setActive1(!active1);
+  };
+
+  const handleActive2 = () => {
+    setActive2(!active2);
+  };
+
   return (
-    <div dir="rtl" className="min-h-screen bg-gray-200 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div
+      dir="rtl"
+      className="min-h-screen bg-gray-200 flex flex-col justify-center py-12 sm:px-6 lg:px-8"
+    >
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           انشاء حساب جديد
@@ -58,7 +73,7 @@ const Singup = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700"
               >
-                الاسم 
+                الاسم
               </label>
               <div className="mt-1">
                 <input
@@ -159,19 +174,45 @@ const Singup = () => {
                 </label>
               </div>
             </div>
-
             <div>
               <button
-                type="submit"
+                onClick={handleActive1}
                 className="p-4 group relative w-full flex justify-center border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700"
               >
-                ارسال
+                انشاء
               </button>
+              <div
+                className={`${
+                  !active1 ? "hiddin" : ""
+                } fixed w-[100%] h-[100%] top-0 left-0 bg-white overflow-scroll`}
+              >
+                <Terms />
+                <div className="flex m-8">
+                  <input
+                    onClick={handleActive2}
+                    className="text-lg ml-2"
+                    type="checkbox"
+                  />{" "}
+                  <p className="text-lg font-bold">
+                    {" "}
+                    أنا أتفهم و اوافق علي كل الشروط
+                  </p>
+                </div>
+                <button
+                  onClick={handleActive1}
+                  type="submit"
+                  className={`${
+                    !active2 ? "pointer-events-none bg-gray-100" : ""
+                  } p-4 mt-4 m-8 group relative w-[200px] flex justify-center border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700`}
+                >
+                  ارسال
+                </button>
+              </div>
             </div>
             <div className={`${styles.noramlFlex} w-full`}>
               <h4>لديك حساب بالفعل؟</h4>
               <Link to="/login" className="text-orange-600 pr-2">
-           سجل الدخول
+                سجل الدخول
               </Link>
             </div>
           </form>
