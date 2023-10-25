@@ -48,7 +48,7 @@ const Singup = () => {
   const [active2, setActive2] = useState(false);
 
   const handleActive1 = () => {
-    setActive1(!active1);
+      setActive1(!active1); 
   };
 
   const handleActive2 = () => {
@@ -83,7 +83,7 @@ const Singup = () => {
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="appearance-none block w-full p-4 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="input appearance-none block w-full p-4 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -103,7 +103,7 @@ const Singup = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="p-4 appearance-none block w-full border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="input p-4 appearance-none block w-full border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
               </div>
             </div>
@@ -123,7 +123,7 @@ const Singup = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="p-4 appearance-none block w-full border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="input p-4 appearance-none block w-full border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
                 {visible ? (
                   <AiOutlineEye
@@ -183,7 +183,7 @@ const Singup = () => {
               </button>
               <div
                 className={`${
-                  !active1 ? "hiddin" : ""
+                  !active1 ? "hidden" : ""
                 } fixed w-[100%] h-[100%] top-0 left-0 bg-white overflow-scroll`}
               >
                 <Terms />
@@ -202,8 +202,8 @@ const Singup = () => {
                   onClick={handleActive1}
                   type="submit"
                   className={`${
-                    !active2 ? "pointer-events-none bg-gray-100" : ""
-                  } p-4 mt-4 m-8 group relative w-[200px] flex justify-center border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700`}
+                    !active2 ? "pointer-events-none bg-gray-300" : "bg-orange-600 hover:bg-orange-700"
+                  } p-4 mt-4 m-8 group relative w-[200px] flex justify-center border border-transparent text-sm font-medium rounded-md text-white`}
                 >
                   ارسال
                 </button>
