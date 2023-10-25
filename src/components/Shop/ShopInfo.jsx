@@ -70,30 +70,42 @@ const ShopInfo = ({ isOwner }) => {
               {data.description}
             </p>
           </div>
-          <div className="p-3">
-            <h5 className="font-[600]">العنوان</h5>
-            <h4 className="text-[#000000a6]">{data.address}</h4>
-          </div>
-          {isAuthenticated && (
-            <div className="p-3">
-              <h5 className="font-[600]">رقم الهاتف</h5>
-              <h4 className="text-[#000000a6]">{data.phoneNumber}</h4>
-            </div>
+          {isAuthenticated ? (
+            <>
+              <div className="p-3">
+                <h5 className="font-[600]">العنوان</h5>
+                <h4 className="text-[#000000a6]">{data.address}</h4>
+              </div>
+              <div className="p-3">
+                <h5 className="font-[600]">رقم الهاتف</h5>
+                <h4 className="text-[#000000a6]">{data.phoneNumber}</h4>
+              </div>
+              <div className="p-3">
+                <h5 className="font-[600]">اجمالي المنتجات</h5>
+                <h4 className="text-[#000000a6]">
+                  {products && products.length}
+                </h4>
+              </div>
+              <div className="p-3">
+                <h5 className="font-[600]">تقييمات البائع</h5>
+                <h4 className="text-[#000000b0]">{averageRating}/5</h4>
+              </div>
+              <div className="p-3">
+                <h5 className="font-[600]">انضم في</h5>
+                <h4 className="text-[#000000b0]">
+                  {data?.createdAt?.slice(0, 10)}
+                </h4>
+              </div>
+            </>
+          ) : (
+            <Link to="/login">
+              <button className="p-4 rounded-lg text-lg font-semibold text-white bg-orange-600 hover:bg-orange-700">
+                {" "}
+                قم بتسجيل الدخول أولا لاظهار بيانات البائع كاملة{" "}
+              </button>
+            </Link>
           )}
-          <div className="p-3">
-            <h5 className="font-[600]">اجمالي المنتجات</h5>
-            <h4 className="text-[#000000a6]">{products && products.length}</h4>
-          </div>
-          <div className="p-3">
-            <h5 className="font-[600]">تقييمات البائع</h5>
-            <h4 className="text-[#000000b0]">{averageRating}/5</h4>
-          </div>
-          <div className="p-3">
-            <h5 className="font-[600]">انضم في</h5>
-            <h4 className="text-[#000000b0]">
-              {data?.createdAt?.slice(0, 10)}
-            </h4>
-          </div>
+
           {isOwner && (
             <div className="py-3 px-4">
               <Link to="/settings">
