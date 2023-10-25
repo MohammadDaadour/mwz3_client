@@ -12,7 +12,7 @@ const Hero = () => {
       className={`flex 800px:flex-row flex-col justify-between items-center relative min-h-[70vh] w-full bg-no-repeat bg-transparent`}
     >
       {/* <div className="bg-black absolute w-full h-full bg-black opacity-50 z-10"></div> */}
-      <div className="w-[90%] h-full 800px:w-[60%]">
+      <div className="w-[90%] h-full 800px:w-[50%]">
         <div className={`w-full px-8 z-20`}>
           <h1
             className={`text-[35px] leading-[1.2] 800px:text-[60px] text-black z-20 font-[600] capitalize`}
