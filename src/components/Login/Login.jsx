@@ -35,7 +35,7 @@ const Login = () => {
   };
 
   return (
-    <div dir="rtl" className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div dir="rtl" className="min-h-screen bg-gray-200 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div lang="ar" className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 lang="ar" className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           سجل الدخول لحسابك
