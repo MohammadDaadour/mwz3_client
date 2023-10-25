@@ -24,7 +24,7 @@ const SwiperFun = () => {
       autoplay={{
         delay: 3000,
       }}
-      className="800px:w-[40%] w-[100%] p-0 text-black"
+      className="800px:w-[50%] w-[100%] p-0 text-black"
     >
       {categoriesSwip &&
         categoriesSwip.map((i, index) => (
