@@ -18,7 +18,7 @@ const Hero = () => {
             className={`text-[35px] leading-[1.2] 800px:text-[60px] text-black z-20 font-[600] capitalize`}
           >
             مع <span className="text-orange-400">موزع</span> <br /> اكتشف خيارات
-            لا حصر لها !
+            لا حصر لها!
           </h1>
           <p className="pt-5 text-[16px] font-[Poppins] font-[400] text-[#000000ba]"></p>
           <div className="flex items-center">
