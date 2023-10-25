@@ -191,10 +191,10 @@ const ProductDetails = ({ data }) => {
                 </div>
                 <div
                   className={`duration-200 px-4 text-lg font-semibold !mt-6 flex items-center justify-between`}
-                  onClick={() => addToCartHandler(data._id)}
+                  onClick={handleMessageSubmit}
                 >
                   <span className="cursor-pointer bg-orange-600 text-white w-[200px] p-2 py-4 rounded-full justify-center flex items-center">
-                    أضف الي العربة{" "}
+                    تواصل مع البائع
                     <AiOutlineShoppingCart width={35} className="mr-1" />
                   </span>
                   <div className="flex pt-3">
@@ -225,11 +225,11 @@ const ProductDetails = ({ data }) => {
                       </h5>
                     </div>
                   </div>
-                  <div onClick={handleMessageSubmit}>
+                  {/* <div onClick={handleMessageSubmit}>
                     <button className="flex items-center justify-center bg-gray-100 p-2 rounded-full">
                       <img src={message} alt="" className="w-[45px]" />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -257,7 +257,10 @@ const ProductDetailsInfo = ({
   const [active, setActive] = useState(1);
 
   return (
-    <div dir="rtl" className="bg-white mt-8 rounded-lg shadow-lg px-3 800px:px-10 py-2 rounded">
+    <div
+      dir="rtl"
+      className="bg-white mt-8 rounded-lg shadow-lg px-3 800px:px-10 py-2 rounded"
+    >
       <div className="w-full flex justify-between border-b pt-10 pb-2">
         <div className="relative">
           <h5
