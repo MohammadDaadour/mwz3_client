@@ -184,7 +184,7 @@ const Header = ({ activeHeading }) => {
               </div>
             </div>
 
-            <div className={`${styles.noramlFlex}`}>
+            {/* <div className={`${styles.noramlFlex}`}>
               <div
                 className="relative cursor-pointer mr-[15px]"
                 onClick={() => setOpenCart(true)}
@@ -194,8 +194,8 @@ const Header = ({ activeHeading }) => {
                 <span className="absolute right-0 top-0 rounded-full bg-gray-500 w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
                   {cart && cart.length}
                 </span>
-              </div>
-            </div>
+              </div> 
+            </div> */}
 
             <div className={`${styles.noramlFlex}`}>
               <div className="relative cursor-pointer mr-[15px]">
@@ -219,7 +219,7 @@ const Header = ({ activeHeading }) => {
             </div>
 
             {/* cart popup */}
-            {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
+            {/* {openCart ? <Cart setOpenCart={setOpenCart} /> : null} */}
 
             {/* wishlist popup */}
             {openWishlist ? (
@@ -257,7 +257,7 @@ const Header = ({ activeHeading }) => {
             </Link>
           </div>
           <div>
-            <div
+            {/* <div
               className="relative mr-[20px]"
               onClick={() => setOpenCart(true)}
             >
@@ -269,10 +269,10 @@ const Header = ({ activeHeading }) => {
               <span class="absolute right-0 top-0 rounded-full bg-gray-500 w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px]  leading-tight text-center">
                 {cart && cart.length}
               </span>
-            </div>
+            </div> */}
           </div>
           {/* cart popup */}
-          {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
+          {/* {openCart ? <Cart setOpenCart={setOpenCart} /> : null} */}
 
           {/* wishlist popup */}
           {openWishlist ? <Wishlist setOpenWishlist={setOpenWishlist} /> : null}
