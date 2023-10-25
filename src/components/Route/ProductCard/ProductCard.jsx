@@ -142,7 +142,7 @@ const ProductCard = ({ data, isEvent }) => {
         </Link>
 
         {/* side options */}
-        <div>
+        {/* <div>
           {click ? (
             <div className="p-1 w-[35px] flex justify-center bg-white absolute right-2 top-4 border icons shadow-gray-300  translate-x-12 duration-300 hover:bg-gray-300 border-0 shadow-lg shadow-sm">
               <AiFillHeart
@@ -183,7 +183,7 @@ const ProductCard = ({ data, isEvent }) => {
             />
           </div>
           {open ? <ProductDetailsCard setOpen={setOpen} data={data} /> : null}
-        </div>
+        </div> */}
       </div>
     </>
   );
