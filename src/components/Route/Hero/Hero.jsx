@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div
       dir="rtl"
-      className={`pt-2 flex 800px:flex-row flex-col justify-between items-center relative min-h-[70vh] 800px:min-h-[80vh] w-full bg-no-repeat bg-transparent`}
+      className={`pt-2 flex 800px:flex-row flex-col justify-between items-center relative min-h-[70vh] pt-2 w-full bg-no-repeat bg-transparent`}
     >
       {/* <div className="bg-black absolute w-full h-full bg-black opacity-50 z-10"></div> */}
       <div className="w-[90%] h-full 800px:w-[60%]">
