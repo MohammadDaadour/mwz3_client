@@ -44,7 +44,7 @@ import {
   AdminDashboardOrders,
   AdminDashboardProducts,
   AdminDashboardEvents,
-  AdminDashboardWithdraw
+  AdminDashboardWithdraw,
 } from "./routes/AdminRoutes";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -62,6 +62,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import PasswordReset from "./components/ForgotPassword/PasswordReset";
+import TermsPage from "./components/Terms/TermsPage";
 
 const App = () => {
   const [stripeApikey, setStripeApiKey] = useState("");
@@ -98,16 +99,20 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/login/forgot-password" element={<ForgotPassword />} />
-        <Route path="/login/reset-password/:id/:token" element={<PasswordReset />} />
-        <Route path="/sign-up" element={<SignupPage />} />
         <Route
-              path="/payment"
-              element={
-                <ProtectedRoute>
-                  <PaymentPage />
-                </ProtectedRoute>
-              }
-            />
+          path="/login/reset-password/:id/:token"
+          element={<PasswordReset />}
+        />
+        <Route path="/sign-up" element={<SignupPage />} />
+        <Route path="/Terms" element={<TermsPage />} />
+        <Route
+          path="/payment"
+          element={
+            <ProtectedRoute>
+              <PaymentPage />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/activation/:activation_token"
           element={<ActivationPage />}
@@ -304,7 +309,7 @@ const App = () => {
             </ProtectedAdminRoute>
           }
         />
-         <Route
+        <Route
           path="/admin-products"
           element={
             <ProtectedAdminRoute>
@@ -312,7 +317,7 @@ const App = () => {
             </ProtectedAdminRoute>
           }
         />
-         <Route
+        <Route
           path="/admin-events"
           element={
             <ProtectedAdminRoute>
@@ -320,7 +325,7 @@ const App = () => {
             </ProtectedAdminRoute>
           }
         />
-         <Route
+        <Route
           path="/admin-withdraw-request"
           element={
             <ProtectedAdminRoute>
