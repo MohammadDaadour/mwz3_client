@@ -205,7 +205,7 @@ const Singup = () => {
                     !active2 ? "pointer-events-none bg-gray-300" : "bg-orange-600 hover:bg-orange-700"
                   } p-4 mt-4 m-8 group relative w-[200px] flex justify-center border border-transparent text-sm font-medium rounded-md text-white`}
                 >
-                  ارسال
+                  تأكيد
                 </button>
               </div>
             </div>
