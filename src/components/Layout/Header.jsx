@@ -142,30 +142,6 @@ const Header = ({ activeHeading }) => {
         <div
           className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
         >
-          {/*  // categories
-          <div className="h-full flex" onClick={() => setDropDown(!dropDown)}>
-            <div className="flex relative w-[270px] hidden 1000px:block">
-              {
-                // <BiMenuAltLeft size={30} className="absolute top-4 left-2 text-white" />
-              }{" "}
-              <button
-                className={`h-full w-full flex justify-between items-center p-3 pr-3 font-sans text-lg font-[500] select-none bg-gray-200`}
-              >
-                قوائم المنتجات
-              </button>
-              <IoIosArrowDown
-                size={20}
-                className="absolute left-2 top-5 cursor-pointer text-white"
-                onClick={() => setDropDown(!dropDown)}
-              />
-              {dropDown ? (
-                <DropDown
-                  categoriesData={categoriesData}
-                  setDropDown={setDropDown}
-                />
-              ) : null}
-            </div>
-          </div> */}
           {/* navitems */}
           <div className={`${styles.noramlFlex} duration-300`}>
             <Navbar active={activeHeading} />
@@ -309,7 +285,6 @@ const Header = ({ activeHeading }) => {
                   onClick={() => setOpen(false)}
                 />
               </div>
-
               <div className="my-8 w-[92%] m-auto h-[40px relative]">
                 <input
                   type="search"
@@ -335,7 +310,6 @@ const Header = ({ activeHeading }) => {
                   })}
                 </div>
               </div>
-
               <Navbar active={activeHeading} />
               <div className="w-full flex ">
                 <div
@@ -351,7 +325,6 @@ const Header = ({ activeHeading }) => {
               <br />
               <br />
               <br />
-
               <div className="flex w-full justify-center">
                 {isAuthenticated ? (
                   <div>
