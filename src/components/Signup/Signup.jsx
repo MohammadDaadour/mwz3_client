@@ -48,7 +48,7 @@ const Singup = () => {
   const [active2, setActive2] = useState(false);
 
   const handleActive1 = () => {
-      setActive1(!active1); 
+    setActive1(!active1);
   };
 
   const handleActive2 = () => {
@@ -176,6 +176,7 @@ const Singup = () => {
             </div>
             <div>
               <button
+                type="button"
                 onClick={handleActive1}
                 className="p-4 group relative w-full flex justify-center border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700"
               >
@@ -202,7 +203,9 @@ const Singup = () => {
                   onClick={handleActive1}
                   type="submit"
                   className={`${
-                    !active2 ? "pointer-events-none bg-gray-300" : "bg-orange-600 hover:bg-orange-700"
+                    !active2
+                      ? "pointer-events-none bg-gray-300"
+                      : "bg-orange-600 hover:bg-orange-700"
                   } p-4 mt-4 m-8 group relative w-[200px] flex justify-center border border-transparent text-sm font-medium rounded-md text-white`}
                 >
                   تأكيد
