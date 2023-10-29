@@ -58,7 +58,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         الطلبات
         </span>
       </div>
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(3)}
       >
@@ -70,7 +70,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           مرتجعات
         </span>
-      </div>
+      </div> */}
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"
@@ -86,7 +86,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         </span>
       </div>
 
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(5)}
       >
@@ -98,7 +98,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           طلباتي
         </span>
-      </div>
+      </div> */}
 
       <div
         className="flex items-center cursor-pointer w-full mb-8"
@@ -114,7 +114,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         </span>
       </div>
 
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(7)}
       >
@@ -126,7 +126,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
           العنوان
         </span>
-      </div>
+      </div> */}
 
       {user && user?.role === "Admin" && (
         <Link to="/admin/dashboard">
