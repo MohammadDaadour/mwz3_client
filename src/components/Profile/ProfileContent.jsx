@@ -152,9 +152,9 @@ const ProfileContent = ({ active }) => {
                 </div>
               </div>
               <input
-                className={`w-[250px] h-[40px] text-center bg-red-600 hover:bg-red-800 duration-200 text-[#fff] mt-8 cursor-pointer`}
+                className={`rounded-lg p-4 text-center bg-orange-600 hover:bg-orange-700 duration-200 text-[#fff] mt-8 cursor-pointer`}
                 required
-                value="Update"
+                value="تعديل"
                 type="submit"
               />
             </form>
