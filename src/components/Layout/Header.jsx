@@ -17,7 +17,7 @@ import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
 import IcoSwiper from "./iconswiper";
-const heart = require("./images/heart.png");
+const heart = require("../Products/heart.png");
 const shoppingCart = require("./images/shopping-cart.png");
 const pfp = require("./images/user.png");
 const logo = require("../../logo.png");

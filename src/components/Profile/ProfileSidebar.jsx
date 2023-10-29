@@ -45,7 +45,7 @@ const ProfileSidebar = ({ setActive, active }) => {
           الصفحة الشخصية
         </span>
       </div>
-      <div
+      {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(2)}
       >
@@ -57,7 +57,7 @@ const ProfileSidebar = ({ setActive, active }) => {
         >
         الطلبات
         </span>
-      </div>
+      </div> */}
       {/* <div
         className="flex items-center cursor-pointer w-full mb-8"
         onClick={() => setActive(3)}
