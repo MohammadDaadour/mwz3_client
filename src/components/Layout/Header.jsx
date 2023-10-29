@@ -153,10 +153,10 @@ const Header = ({ activeHeading }) => {
                 className="relative cursor-pointer mr-[15px]"
                 onClick={() => setOpenWishlist(true)}
               >
-                <img width={35} src={heart} alt="heart" />
-                <span className="absolute right-0 top-0 rounded-full bg-gray-500 w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
+                <img width={30} src={heart} alt="heart" />
+                {/* <span className="absolute left-[7px] font-semibold top-1 rounded-full w-4 h-4 top right p-0 m-0 text-black font-mono text-lg leading-tight text-center">
                   {wishlist && wishlist.length}
-                </span>
+                </span> */}
               </div>
             </div>
 
@@ -270,13 +270,13 @@ const Header = ({ activeHeading }) => {
                   >
                     <img
                       className="top-4 relative cursor-pointer"
-                      width={35}
+                      width={30}
                       src={heart}
                       alt="heart"
                     />
-                    <span class="absolute right-0 rounded-full bg-gray-500 w-4 h-4 top-4 right p-0 m-0 text-white font-mono text-[12px]  leading-tight text-center">
+                    {/* <span class="absolute right-0 rounded-full bg-gray-500 w-4 h-4 top-4 right p-0 m-0 text-white font-mono text-[12px]  leading-tight text-center">
                       {wishlist && wishlist.length}
-                    </span>
+                    </span> */}
                   </div>
                 </div>
                 <RxCross1
