@@ -20,6 +20,8 @@ const sweetshirtFront = require('./sweetshirtFront.png');
 const carFront = require('./carFront.png'); 
 const shoesFront = require('./men-shoes.png');
 const accFront = require('./accFront.png');
+const electro = require('./appliances.png');
+const electroFront = require('./electoFront.png');
 
 export const navItems = [
   {
@@ -119,13 +121,12 @@ export const categoriesData = [
     subTitle: "",
     image_Url: tablet,
   },
-  /*{
+  {
     id: 9,
-    title: "Music and Gaming",
+    title: "أجهزة كهربائية",
     subTitle: "",
-    image_Url:
-      "https://static.vecteezy.com/system/resources/previews/011/996/555/original/3d-black-headphone-illustration-ecommerce-icon-png.png",
-  },*/
+    image_Url: electro
+  },
   {
     id: 10,
     title: "أقسام أخري",
@@ -183,6 +184,12 @@ export const categoriesSwip = [
     title: "هواتف و أجهزة لوحية",
     subTitle: "",
     image_Url: mobileFront,
+  },
+  {
+    id: 9,
+    title: "أجهزة كهربائية",
+    subTitle: "",
+    image_Url: electroFront,
   }
 ]
 
