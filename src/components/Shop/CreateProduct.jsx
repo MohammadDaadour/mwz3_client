@@ -222,6 +222,7 @@ const CreateProduct = () => {
           <div>
             <input
               type="submit"
+              onSubmit={()=>setName("")}
               value="أنشئ"
               className="mt-2 cursor-pointer appearance-none text-center block w-full px-3 h-[35px] placeholder-gray-400 focus:outline-none bg-red-600 hover:bg-red-800 text-white duration-200 font-semi-bold sm:text-sm"
             />
