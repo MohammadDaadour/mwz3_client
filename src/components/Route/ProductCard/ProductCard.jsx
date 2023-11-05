@@ -129,9 +129,11 @@ const ProductCard = ({ data, isEvent }) => {
                   : data.discountPrice}
                 ج.م
               </h5>
-              <h4 className={`${styles.price} text-gray-400 relative top-1`}>
-                {data.originalPrice ? data.originalPrice : null}
-              </h4>
+              {data.originalPrice != data.discountPrice && (
+                <h4 className={`${styles.price} text-gray-400 relative top-1`}>
+                  {data.originalPrice ? data.originalPrice : null}
+                </h4>
+              )}
             </div>
             {
               //<span className="font-[400] text-[17px] text-[#68d284] absolute bottom-[2px]">
