@@ -129,7 +129,7 @@ const ProductCard = ({ data, isEvent }) => {
                   : data.discountPrice}
                 ج.م
               </h5>
-              {data.originalPrice != data.discountPrice && (
+              {data.originalPrice !== data.discountPrice && (
                 <h4 className={`${styles.price} text-gray-400 relative top-1`}>
                   {data.originalPrice ? data.originalPrice : null}
                 </h4>
