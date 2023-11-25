@@ -54,7 +54,7 @@ const FeaturedProduct = () => {
               {disLab &&
                 disLab !== 0 &&
                 disLab.map((i, index) => <ProductCard data={i} key={index} />)}
-              <button className="p-2 bg-orange-400 text-white">المزيد</button>
+              <button onClick={() => submitHandle("أجهزة كمبيوتر و لابتوب")} className="p-2 bg-orange-400 text-white">المزيد</button>
             </>
           )}
         </div>
@@ -69,7 +69,7 @@ const FeaturedProduct = () => {
               {disMob &&
                 disMob !== 0 &&
                 disMob.map((i, index) => <ProductCard data={i} key={index} />)}
-              <button className="p-2 bg-orange-400 text-white">المزيد</button>
+              <button onClick={() => submitHandle("هواتف و أجهزة لوحية")} className="p-2 bg-orange-400 text-white">المزيد</button>
             </>
           )}
         </div>
