@@ -71,7 +71,7 @@ const FeaturedProduct = () => {
           {allProducts && allProducts.length !== 0 && (
             <>
               {disMob &&
-                disMob !== 0 &&
+                disMob !== 0 && 
                 disMob.map((i, index) => <ProductCard data={i} key={index} />)}
               <button onClick={() => submitHandle("هواتف و أجهزة لوحية")} className="p-2 bg-orange-400 text-white">المزيد</button>
             </>
