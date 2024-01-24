@@ -24,6 +24,10 @@ const FeaturedProduct = () => {
       (product) => product.category === "هواتف و أجهزة لوحية"
     );
     var disMob = mob.slice(0, 5);
+    var other = allProducts.filter((product) => {
+      product.category === "أقسام أخري"
+    })
+    var disOther = other.slice(0, 5);
   }
   return (
     <div>
@@ -70,6 +74,16 @@ const FeaturedProduct = () => {
                 disMob !== 0 &&
                 disMob.map((i, index) => <ProductCard data={i} key={index} />)}
               <button onClick={() => submitHandle("هواتف و أجهزة لوحية")} className="p-2 bg-orange-400 text-white">المزيد</button>
+            </>
+          )}
+        </div>
+        <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12 border-0">
+          {allProducts && allProducts.length !== 0 && (
+            <>
+              {disOther &&
+                disOther !== 0 &&
+                disOther.map((i, index) => <ProductCard data={i} key={index} />)}
+              <button onClick={() => submitHandle("أقسام أخري")} className="p-2 bg-orange-400 text-white">المزيد</button>
             </>
           )}
         </div>
