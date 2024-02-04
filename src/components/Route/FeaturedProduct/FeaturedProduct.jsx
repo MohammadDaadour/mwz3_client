@@ -24,11 +24,11 @@ const FeaturedProduct = () => {
       (product) => product.category === "هواتف و أجهزة لوحية"
     );
     var disMob = mob.slice(0, 5);
-    var other = allProducts.filter((product) => {
-      product.category === "أقسام أخري"
-    })
-    var disOther = other.slice(0, 5);
-  }
+  //   var other = allProducts.filter((product) => {
+  //     product.category === "أقسام أخري"
+  //   })
+  //   var disOther = other.slice(0, 5);
+  // }
   return (
     <div>
       <div className={`${styles.section} py-16 px-8`}>
@@ -77,12 +77,12 @@ const FeaturedProduct = () => {
             </>
           )}
         </div>
-        {disOther && (
+{/*         {disOther && (
           <div className={`${styles.heading}`}>
             <h1 lang="ar">أقسام أخري</h1>
           </div>
-        )}
-        <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12 border-0">
+        )} */}
+{/*         <div className="grid grid-cols-1 gap-[20px] md:grid-cols-2 md:gap-[25px] lg:grid-cols-4 lg:gap-[25px] xl:grid-cols-5 xl:gap-[30px] mb-12 border-0">
           {allProducts && allProducts.length !== 0 && (
             <>
               {disOther &&
@@ -91,7 +91,7 @@ const FeaturedProduct = () => {
               <button onClick={() => submitHandle("أقسام أخري")} className="p-2 bg-orange-400 text-white">المزيد</button>
             </>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );
