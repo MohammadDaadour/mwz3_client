@@ -92,7 +92,7 @@ const App = () => {
           element={
             <AdminModProtectedRoute>
              <PendingProducts />
-            <AdminModProtectedRoute/>
+            </AdminModProtectedRoute>
          } 
         />
         <Route
