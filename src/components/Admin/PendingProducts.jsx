@@ -10,7 +10,7 @@ const PendingProducts = () => {
 
   const handleApproveProduct = async (productId) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/v2/product/approve-product/${productId}`, {
+      const response = await fetch(`https://www.mwz3.com/api/v2/product/approve-product/${productId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const PendingProducts = () => {
 
   const handleDeleteProduct = async (productId) => {
     try {
-      const response =  fetch(`http://localhost:8000/api/v2/product/delete-shop-product/${productId}`, {
+      const response =  fetch(`https://www.mwz3.com/api/v2/product/delete-shop-product/${productId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
