@@ -52,6 +52,7 @@ import Store from "./redux/store";
 import { loadSeller, loadUser } from "./redux/actions/user";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import ProtectedAdminRoute from "./routes/ProtectedAdminRoute";
+import AdminModProtectedRoute from "./routes/AdminModProtectedRoute";
 import { ShopHomePage } from "./ShopRoutes.js";
 import SellerProtectedRoute from "./routes/SellerProtectedRoute";
 import { getAllProducts } from "./redux/actions/product";
@@ -86,7 +87,14 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/login/forgot-password" element={<ForgotPassword />} />
-        <Route path="/pending-products" element={<PendingProducts />} />
+        <Route 
+          path="/pending-products"
+          element={
+            <AdminModProtectedRoute>
+             <PendingProducts />
+            <AdminModProtectedRoute/>
+         } 
+        />
         <Route
           path="/login/reset-password/:id/:token"
           element={<PasswordReset />}
