@@ -63,6 +63,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import PasswordReset from "./components/ForgotPassword/PasswordReset";
 import TermsPage from "./components/Terms/TermsPage";
+import PendingProducts from "./components/Admin/PendingProducts.jsx";
 
 const App = () => {
   const [stripeApikey, setStripeApiKey] = useState("");
