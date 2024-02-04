@@ -99,6 +99,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/login/forgot-password" element={<ForgotPassword />} />
+        <Route path="/pending-products" element={<PendingProducts />} />
         <Route
           path="/login/reset-password/:id/:token"
           element={<PasswordReset />}
