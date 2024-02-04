@@ -6,7 +6,7 @@ import styles from "../../styles/styles";
 const PendingProducts = () => {
   const { allProducts } = useSelector((state) => state.products);
 
-  const pendingProducts = allProducts && allProducts.filter((product) => product.status === "pending");
+  const pendingProducts = allProducts && allProducts.filter((product) => product.status === "pending" || !product.status);
 
   const handleApproveProduct = async (productId) => {
     try {
