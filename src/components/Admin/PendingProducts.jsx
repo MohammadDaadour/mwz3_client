@@ -19,7 +19,6 @@ const PendingProducts = () => {
   
       if (!response.ok) {
         console.error('Failed to approve product:', response.statusText);
-        // Handle error, maybe show a notification to the user
         return;
       }
   
