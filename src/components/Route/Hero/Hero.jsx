@@ -7,6 +7,7 @@ const lapAndComp = require("./LapAndComp-removebg-preview.png");
 
 const Hero = () => {
   return (
+<>
     <div
       dir="rtl"
       className={`flex 800px:flex-row flex-col justify-between items-center relative pt-8 w-full bg-no-repeat bg-transparent`}
@@ -34,9 +35,9 @@ const Hero = () => {
         </div>
       </div>
       <SwiperFun />
-اعرض منتجاتك الاستعمال و كسر الزيرو و سيب الباقي علينا
-
     </div>
+اعرض منتجاتك الاستعمال و كسر الزيرو و سيب الباقي علينا
+<>
   );
 };
 
