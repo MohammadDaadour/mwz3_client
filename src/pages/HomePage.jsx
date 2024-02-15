@@ -13,8 +13,9 @@ const HomePage = () => {
     <div dir='rtl'>
         <Header activeHeading={1} />
         <Hero />
+<h1 className="p-4">
 اعرض منتجاتك الاستعمال و كسر الزيرو و سيب الباقي علينا
-
+</h1>
         <FeaturedProduct />
         <Footer />
     </div>
