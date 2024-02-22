@@ -14,7 +14,6 @@ const HomePage = () => {
         <Header activeHeading={1} />
         <Hero />
 <center className="p-4 text-lg">
-اعرض منتجاتك الاستعمال و كسر الزيرو و سيب الباقي علينا
 </center>
         <FeaturedProduct />
         <Footer />
